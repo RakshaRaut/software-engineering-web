@@ -6,7 +6,7 @@ export default function Home() {
         avatarText="P"
         title="Product Name"
         subheader="Status - 01/01/2019"
-        image="https://example.com/image.jpg"
+        image="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg"
         description="This is a brief description of the product that has been configured in the catalog."
         details={[
           "Product Type: Simple",
