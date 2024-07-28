@@ -1,4 +1,5 @@
 "use client";
+import { styled, alpha } from '@mui/material/styles';
 import React, { useState, MouseEvent } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -13,8 +14,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+// import SearchIcon from '@mui/icons-material/Search';
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Home","Categories","Products", ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
@@ -35,6 +37,16 @@ function Navbar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  // const SearchIconWrapper = styled('div')(({ theme }) => ({
+  //   padding: theme.spacing(0, 2),
+  //   height: '100%',
+  //   position: 'absolute',
+  //   pointerEvents: 'none',
+  //   display: 'flex',
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // }));
 
   return (
     <AppBar position="static">
@@ -68,6 +80,18 @@ function Navbar() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
+{/* 
+            </Typography>
+              <Search>
+                <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search> */}
+
               <MenuIcon />
             </IconButton>
             <Menu
@@ -123,6 +147,7 @@ function Navbar() {
               >
                 {page}
               </Button>
+              
             ))}
           </Box>
 
@@ -155,6 +180,8 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
+
+         
         </Toolbar>
       </Container>
     </AppBar>
